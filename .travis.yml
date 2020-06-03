@@ -3,9 +3,6 @@ language: node_js
 node_js:
   - '13.12.0'
 
-  before_install:
-  - "export DISPLAY=:99.0"
-  - "sh -e /etc/init.d/xvfb start"
-  - "npm config set spin false"
 
-script: npm test -- --suite dresssearchresults
+script: 
+  - npm test -- --suite dresssearchresults
