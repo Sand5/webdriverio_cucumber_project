@@ -9,5 +9,5 @@ cache:
 addons: 
    chrome: stable
 
-script: "npm test -- --suite menunaviagtion"
+script: "npm test -- --suite dresssearchresults"
 

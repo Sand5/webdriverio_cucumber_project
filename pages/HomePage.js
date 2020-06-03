@@ -11,9 +11,6 @@ class HomePage {
     return $(".btn.btn-default.button-search");
   }
 
-  get searchButton() {
-    return $("btn.btn-default.button-search");
-  }
 
   get womenMenuOption() {
     return $('ul.menu-content >li >a[title="Women"]');
