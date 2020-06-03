@@ -8,6 +8,4 @@ node_js:
   - "sh -e /etc/init.d/xvfb start"
   - "npm config set spin false"
 
-
-script:
-  - npm test -- --suite dresssearchresults
+script: npm test -- --suite dresssearchresults
