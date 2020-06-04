@@ -1,4 +1,3 @@
-@regression
 Feature:Login
    As a user,I want to be able to login to my account to view account details
 
