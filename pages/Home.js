@@ -1,6 +1,6 @@
 class Home {
   get url() {
-    return "/";
+    return "https://www.google.com";
   }
 
   get searchField() {

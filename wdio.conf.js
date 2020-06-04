@@ -1,7 +1,7 @@
 var baseUrl;
 
-if (process.env.SERVER === "google") {
-  baseUrl = "https://www.google.com";
+if (process.env.SERVER === "automation") {
+  baseUrl = "http://automationpractice.com/index.php";
 } else {
   baseUrl = "http://automationpractice.com/index.php";
 }
@@ -41,6 +41,10 @@ exports.config = {
 
       menunaviagtion: [
         "./features/Online Shopping/MenuNavigation.feature"
+      ],
+
+      alltest:[
+        "./features/**/*.feature"
       ]
   },
   //
@@ -70,7 +74,7 @@ exports.config = {
       // maxInstances can get overwritten per capability. So if you have an in-house Selenium
       // grid with only 5 firefox instances available you can make sure that not more than
       // 5 instances get started at a time.
-      maxInstances: 5,
+      maxInstances: 1,
       //
       browserName: "chrome",
 
@@ -79,7 +83,7 @@ exports.config = {
       // excludeDriverLogs: ['*'], // pass '*' to exclude all driver session logs
       // excludeDriverLogs: ['bugreport', 'server'],
 
-      'goog:chromeOptions': { args: ['headless'] }
+      //'goog:chromeOptions': { args: ['headless'] }
     },
   ],
   //
@@ -238,6 +242,7 @@ exports.config = {
    */
    beforeScenario: function (uri, feature, scenario, sourceLocation) {
     browser.maximizeWindow();
+  
   },
   /**
    * Runs before a Cucumber step
