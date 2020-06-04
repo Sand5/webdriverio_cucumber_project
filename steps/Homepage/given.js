@@ -8,6 +8,6 @@ Given("A web browser is at the Google home page", () => {
   gotToURL(homePage.url);
 });
 
-Given(/^the browser is at the "(Home)" page$/,page => {
+Given(/^the browser is at the "(.*)" page$/,page => {
   gotToPage(page);
 });

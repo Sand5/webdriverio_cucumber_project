@@ -9,8 +9,7 @@ export default (keyword) => {
     const productText = product.getText().trim().toLowerCase();
 
     if (productText) {
-
-        console.log(productText);
+      console.log(productText);
       assert(
         productText.includes(keyword),
         `Product ${product.getText()} does not contain ${keyword}`

@@ -5,7 +5,10 @@
   "main": "index.js",
   "scripts": {
     "selenium-server": "./node_modules/.bin/selenium-standalone start",
-    "test": "./node_modules/.bin/wdio ./wdio.conf.js"
+    "test": "./node_modules/.bin/wdio ./wdio.conf.js",
+    "test:dev": "./node_modules/.bin/wdio ./wdio.conf.js --cucumberOpts.tagExpression='dev'",
+    "test:int": "./node_modules/.bin/wdio ./wdio.conf.js --cucumberOpts.tagExpression='@int'",
+    "test:regression": "./node_modules/.bin/wdio ./wdio.conf.js --cucumberOpts.tagExpression='@regression'"
   },
   "author": "Kwabena Imbeah",
   "license": "ISC",
@@ -27,6 +30,7 @@
   },
   "dependencies": {
     "@types/webdriverio": "^5.0.0",
-    "chai": "^4.2.0"
+    "chai": "^4.2.0",
+    "dotenv": "^8.2.0"
   }
 }
