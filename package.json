@@ -6,7 +6,8 @@
   "scripts": {
     "selenium-server": "./node_modules/.bin/selenium-standalone start",
     "test": "./node_modules/.bin/wdio ./wdio.conf.js",
-    "test:dev": "./node_modules/.bin/wdio ./wdio.conf.js --cucumberOpts.tagExpression='dev'",
+    "test:reg": "./node_modules/.bin/wdio ./wdio.conf.js --cucumberOpts.tagExpression='@reg'",
+    "test:dev": "./node_modules/.bin/wdio ./wdio.conf.js --cucumberOpts.tagExpression='@dev'",
     "test:int": "./node_modules/.bin/wdio ./wdio.conf.js --cucumberOpts.tagExpression='@int'",
     "test:regression": "./node_modules/.bin/wdio ./wdio.conf.js --cucumberOpts.tagExpression='@regression'"
   },

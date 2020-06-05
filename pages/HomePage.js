@@ -23,6 +23,10 @@ class HomePage {
   get tshirtMenuOption() {
     return $('ul.menu-content >li >a[title="T-shirts"]');
   }
+
+  get loginError() {
+      return $("//*[contains(text(),'There is 1 error')]");
+  }
   /**
    * Searchs for a keyword
    *

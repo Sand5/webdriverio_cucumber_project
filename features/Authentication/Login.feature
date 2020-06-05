@@ -16,3 +16,17 @@ Feature:Login
       Examples:
       |email                            |                       
       |cucumber_automation_int@gmail.com|
+
+
+
+      Scenario Outline: Attempting to login with invaild credentials;
+      Given the browser is at the "Login" page
+      When the user tries to use vaild credentials,"<email>" to login
+      Then the title of the page should be "Login - My Store"
+      And the error message shown should contain "There is 1 error"
+      
+      @int
+      Examples:
+      |email            |
+      |123_dev@gamil.com|                         
+    

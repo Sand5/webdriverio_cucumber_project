@@ -1,5 +1,5 @@
 import catalogPage from "../../pages/CatalogPage";
-import assert from "assert";
+//import assert from "assert";
 
 /**
  * @param {boolean} keyword search the keyword term

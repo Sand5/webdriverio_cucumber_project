@@ -4,6 +4,7 @@ import checkProducts from "../../support/asserstions/checkProducts";
 import checkNoResults from "../../support/asserstions/checkNoResults";
 import checkProductsContain from "../../support/asserstions/checkProductsContain";
 import checkTitle from "../../support/asserstions/checkTitle";
+import signOut from "../../support/action/signOut";
 
 Then(/^links related to "(.*)" are shown on the results page$/, (keyword) => {
   /* 
@@ -37,4 +38,5 @@ Then(/^the search results show products related to "(.*)"$/, (keyword) => {
 
 Then(/^the title of the page should be "(.*)"$/, (title) => {
   checkTitle(title);
+  signOut();
 });

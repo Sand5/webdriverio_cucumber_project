@@ -173,7 +173,7 @@ exports.config = {
     source: true, // <boolean> hide source uris
     profile: [], // <string[]> (name) specify the profile to use
     strict: false, // <boolean> fail if there are any undefined or pending steps
-    tagExpression: `@regression or ${process.env.ENVIRONMENT}`, // <string> (expression) only execute the features or scenarios with tags matching the expression
+    tagExpression: { args: process.env.CI ?`@regression`:`@regression or ${process.env.ENVIRONMENT} or @int`}, // <string> (expression) only execute the features or scenarios with tags matching the expression
     timeout: 60000, // <number> timeout for step definitions
     ignoreUndefinedDefinitions: false, // <boolean> Enable this config to treat undefined definitions as warnings.
   },
@@ -212,11 +212,10 @@ exports.config = {
    * @param {Array.<String>} specs List of spec file paths that are to be run
    */
   beforeSession: function (config, capabilities, specs) {
-    
     require("@babel/register");
-    expect = require("chai").expect;
     should = require("chai").should();
     assert = require("chai").assert;
+
   
   },
   /**
@@ -225,8 +224,9 @@ exports.config = {
    * @param {Array.<Object>} capabilities list of capabilities details
    * @param {Array.<String>} specs List of spec file paths that are to be run
    */
-  // before: function (capabilities, specs) {
-  // },
+   //before: function (capabilities, specs) {
+    
+  //},
   /**
    * Runs before a WebdriverIO command gets executed.
    * @param {String} commandName hook command name
