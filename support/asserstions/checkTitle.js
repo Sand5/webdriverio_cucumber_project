@@ -6,7 +6,6 @@
  *
  */
 export default (title) => {
-  browser.pause(2500);
   let pagetitle = browser.getTitle();
   assert(pagetitle === title, `Title, ${pagetitle} not equal to ${title}`);
 };

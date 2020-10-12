@@ -6,7 +6,7 @@ Feature:Login
       Given the browser is at the "Login" page
       When the user tries to use vaild credentials,"<email>" to login
       Then the title of the page should be "My account - My Store"
-      @regression
+      @regression-
       Examples:
       |email          |
       |frame@gmail.com|                                                           
