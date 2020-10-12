@@ -13,7 +13,7 @@ class LoginPage {
   }
 
   get signInButton() {
-     return $("#SubmitLogin");
+     return $("button#SubmitLogin > span");
   }
 
   /**
@@ -27,7 +27,8 @@ class LoginPage {
     this.emailInput.waitForDisplayed(5000);
     this.emailInput.setValue(email);
     this.passwordInput.setValue(password);
-    this.signInButton.click();
+    browser.keys('\uE007');
+    //this.signInButton.click();
     //this.emailInput.setValue(email);
 
    }

@@ -5,6 +5,6 @@ export default () => {
     signout.signOutButton.waitForDisplayed(3000);
     signout.signOutButton.click();
   } else {
-    console.log("Not sign out button to click");
+    console.log("No sign out button to click");
   }
 };
