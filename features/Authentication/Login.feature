@@ -7,15 +7,11 @@ Feature:Login
       When the user tries to use vaild credentials,"<email>" to login
       Then the title of the page should be "My account - My Store"
       
-      @dev
+      @regression
       Examples:
-      |email                            |
-      |cucumber_automation_dev@gmail.com|                         
-    
-      @int
-      Examples:
-      |email                            |                       
-      |cucumber_automation_int@gmail.com|
+      |email          |
+      |frame@gmail.com|                                                           
+      |frame@gmail.com|
 
 
 
@@ -25,7 +21,7 @@ Feature:Login
       Then the title of the page should be "Login - My Store"
       And the error message shown should contain "There is 1 error"
       
-      @int
+      @regression
       Examples:
       |email            |
       |123_dev@gamil.com|                         

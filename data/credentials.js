@@ -1,6 +1,6 @@
 module.exports = [
   {
-    email: "cucumber_automation_dev@gmail.com",
+    email: "frame@gmail.com",
     password: process.env.DEV_PASSWORD,
   },
   {
