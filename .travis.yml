@@ -7,10 +7,6 @@ cache:
 language: node_js
 node_js: 
   - "13.12.0"
-  
-  addons:
-  chrome: stable
-
 before_install:
   # starting a GUI to run tests, per https://docs.travis-ci.com/user/gui-and-headless-browsers/#Using-xvfb-to-Run-Tests-That-Require-a-GUI
   - "export DISPLAY=:99.0"
@@ -19,6 +15,7 @@ before_install:
 
 before_script:
   - "npm install"
+
 script: "npm test"
 sudo: required
 
