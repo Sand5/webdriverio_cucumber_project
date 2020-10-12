@@ -86,7 +86,7 @@ exports.config = {
       // excludeDriverLogs: ['bugreport', 'server'],
 
       'goog:chromeOptions': { 
-        args: process.env.CI ? ['headless'] :[],
+        args: process.env.ENVIRONMENT ? ['headless','disable-gpu'] :[],
     
       }
       
