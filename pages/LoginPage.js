@@ -1,6 +1,5 @@
 class LoginPage {
-  
-    get url() {
+  get url() {
     return "?controller=authentication";
   }
 
@@ -9,11 +8,11 @@ class LoginPage {
   }
 
   get passwordInput() {
-     return $("#passwd");
+    return $("#passwd");
   }
 
   get signInButton() {
-     return $("button#SubmitLogin > span");
+    return $("button#SubmitLogin > span");
   }
 
   /**
@@ -22,17 +21,13 @@ class LoginPage {
    * @param {String} password
    */
 
-   signIn(email,password) {
-
+  signIn(email, password) {
     this.emailInput.waitForDisplayed(5000);
     this.emailInput.setValue(email);
     this.passwordInput.setValue(password);
-    //browser.keys("\uE007");
+     //browser.keys("\uE007");
     this.signInButton.click();
-    
-
-   }
-
+  }
 }
 
 export default new LoginPage();
